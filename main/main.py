@@ -13,7 +13,8 @@
 #
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+#
+#    Thanks to Svetlana for cleaning up the code.
 
 import socket
 import sys
@@ -49,6 +50,9 @@ while 1:
    if text.find('001') != -1:
        irc.send("JOIN "+ channel +"\n")        #join the chan
        print("Sent JOIN\r\n")
+       
+   ##COMMANDS
+   
    # Say Something
    if text.find(':!say') !=-1: 
        t = text.split(':!say') 
@@ -60,3 +64,9 @@ while 1:
        rand=random.randrange(1,12)
        rand=str(rand)	#convert to string, python doesn't like it when strings/numbers are mixed.
        irc.send('PRIVMSG '+channel+' :I rolled a ' + rand + '!\r\n')
+       
+   #BANHAMMAH    
+   if text.find(':!ban') !=-1: 
+      t=text.split(':!ban')
+      usr = t[1].strip()
+      irc.send('PRIVMSG chanserv FLAGS ' + channel + usr + ' +b\r\n')
