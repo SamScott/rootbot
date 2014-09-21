@@ -69,4 +69,4 @@ while 1:
    if text.find(':!ban') !=-1: 
       t=text.split(':!ban')
       usr = t[1].strip()
-      irc.send('PRIVMSG chanserv FLAGS ' + channel + usr + ' +b\r\n')
+      irc.send('PRIVMSG chanserv FLAGS ' + channel + usr + ' ' + ' +b\r\n')
