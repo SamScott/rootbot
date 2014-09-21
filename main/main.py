@@ -60,13 +60,12 @@ while 1:
        irc.send('PRIVMSG '+channel+' :' + str(to) +'\r\n')
    # Roll dice
    if text.find(':!dice') !=-1: 
-       print('Found valid command DICE')
        rand=random.randrange(1,12)
        rand=str(rand)	#convert to string, python doesn't like it when strings/numbers are mixed.
        irc.send('PRIVMSG '+channel+' :I rolled a ' + rand + '!\r\n')
        
    #BANHAMMAH    
    if text.find(':!ban') !=-1: 
-      t=text.split(':!ban')
-      usr = t[1].strip()
-      irc.send('PRIVMSG chanserv FLAGS ' + channel + usr + ' ' + ' +b\r\n')
+      t = text.split(':!ban')
+      to = t[1].strip()
+      irc.send('PRIVMSG chanserv FLAGS ' + channel + str(to) + ' ' + ' +b\r\n')
