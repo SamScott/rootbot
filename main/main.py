@@ -20,6 +20,7 @@ import socket
 import sys
 import random
 import time
+import re
 server = "irc.esper.net"       
 channel = "#test1234"
 botnick = "root_bot"
@@ -64,8 +65,4 @@ while 1:
        rand=str(rand)	#convert to string, python doesn't like it when strings/numbers are mixed.
        irc.send('PRIVMSG '+channel+' :I rolled a ' + rand + '!\r\n')
        
-   #BANHAMMAH    
-   if text.find(':!ban') !=-1: 
-      t = text.split(':!ban')
-      to = t[1].strip()
-      irc.send('PRIVMSG chanserv FLAGS ' + channel + str(to) + ' ' + ' +b\r\n')
+  
