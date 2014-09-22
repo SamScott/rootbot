@@ -1,4 +1,4 @@
-#    ROOT_BOT 1.5
+#    ROOT_BOT 1.6
 #    (C) 2014 root_user, Svetlana A. Tkachenko
 #
 #    This program is free software: you can redistribute it and/or modify
