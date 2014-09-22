@@ -72,7 +72,7 @@ while 1:
 
 
    if text.find(':!help') !=-1:
-       irc.send('PRIVMSG '+channel+' :You don't need help. You're a big boy.')
+       irc.send('PRIVMSG '+channel+" :You don't need help. You're a big boy.")
        irc.send('PRIVMSG '+channel+' :But seriously, find my full commandlist at http://github.com/samscott/rootbot/')
 
        
