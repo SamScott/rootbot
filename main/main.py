@@ -59,10 +59,22 @@ while 1:
        t = text.split(':!say') 
        to = t[1].strip() 
        irc.send('PRIVMSG '+channel+' :' + str(to) +'\r\n')
+       
    # Roll dice
    if text.find(':!dice') !=-1: 
        rand=random.randrange(1,12)
        rand=str(rand)	#convert to string, python doesn't like it when strings/numbers are mixed.
        irc.send('PRIVMSG '+channel+' :I rolled a ' + rand + '!\r\n')
+       
+   # Snarky remarks
+   if text.find('asshole') !=-1: 
+       irc.send('PRIVMSG '+channel+" :You're an asshole.\r\n")
+
+
+   if text.find(':!help') !=-1:
+       irc.send('PRIVMSG '+channel+' :You don't need help. You're a big boy.')
+       irc.send('PRIVMSG '+channel+' :But seriously, find my full commandlist at http://github.com/samscott/rootbot/')
+
+       
        
   
