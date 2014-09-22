@@ -1,4 +1,4 @@
-#    ROOT_BOT 1.6
+#    ROOT_BOT 1.6.1
 #    (C) 2014 root_user, Svetlana A. Tkachenko
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -72,8 +72,8 @@ while 1:
 
 
    if text.find(':!help') !=-1:
-       irc.send('PRIVMSG '+channel+" :You don't need help. You're a big boy.")
-       irc.send('PRIVMSG '+channel+' :But seriously, find my full commandlist at http://github.com/samscott/rootbot/')
+       irc.send('PRIVMSG '+channel+" :You don't need help. You're a big boy.\r\n")
+       irc.send('PRIVMSG '+channel+' :But seriously, find my full commandlist at http://github.com/samscott/rootbot/\r\n')
 
        
        
