@@ -21,6 +21,7 @@ import sys
 import random
 import time
 import re
+import string
 server = "irc.esper.net"       
 channel = "#test1234"
 botnick = "root_bot"
@@ -72,9 +73,15 @@ while 1:
 
 
    if text.find(':!help') !=-1:
-       irc.send('PRIVMSG '+channel+" :You don't need help. You're a big boy.\r\n")
-       irc.send('PRIVMSG '+channel+' :But seriously, find my full commandlist at http://github.com/samscott/rootbot/\r\n')
-
-       
+       irc.send('PRIVMSG '+channel+' :Find my full commandlist at http://github.com/samscott/rootbot/\r\n')
+   #ROT13
+   if text.find(':!rot13') !=-1: 
+       t = text.split(':!rot13') 
+       inp = t[1].strip()
+       rot13 = string.maketrans( 
+      "ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz", 
+      "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm")
+       out = string.translate(inp, rot13)
+       irc.send('PRIVMSG '+channel+' :' + out +'\r\n')
        
   
