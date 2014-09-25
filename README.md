@@ -6,6 +6,12 @@ This is a purely "for-fun" bot, meaning it has mostly fun features instead of ch
 
 Features at the moment [they are added almost every day]:
 !help - help
+
+
 !say - self-explanitory
+
+
 !dice - roll dice!
+
+
 !rot13 - Rot13 encryption!
