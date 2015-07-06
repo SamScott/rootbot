@@ -3,4 +3,4 @@ rootbot
 
 An IRC bot written in Python.
 
-===========I AM MOVING THE PROJECT TO C9.IO! IF YOU WANT PERMISSION TO EDIT EMAIL ME AT LUBBA@HUSH.COM.========
+Feel free to use this as a base to make an IRC bot. I don't update it anymore.
